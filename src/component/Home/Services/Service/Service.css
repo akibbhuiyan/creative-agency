@@ -1,0 +1,12 @@
+.service {
+	width: 330px !important;
+}
+.service:hover{
+   box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+}
+@media (max-width: 768px){ 
+   .card-group > .card {
+	flex: 1 0 60%;
+	margin-bottom: 0;
+}}

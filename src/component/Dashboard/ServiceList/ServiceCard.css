@@ -1,0 +1,21 @@
+.setu-btn {
+  height: 39px;
+  padding: 0px 20px;
+  background-color: #ffe3e3;
+  border: none;
+  border-radius: 6px;
+  color: #ff4545;
+}
+.card-width{
+    width: 415px;
+}.statusOpyion {
+	background: transparent;
+	border: none;
+}
+.bg-white {
+	--bs-bg-opacity: 1;
+	background-color: #FFF !important;
+}
+.table tr th ,.table tr td{
+  padding: 13px 8px;
+}

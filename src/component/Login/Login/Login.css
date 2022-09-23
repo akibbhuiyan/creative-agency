@@ -1,0 +1,22 @@
+.loginForm {
+	height: 400px;
+	width: 570px;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #ABABAB;
+	border-radius: 5px;
+}.goggole_Login {
+	border: 1px solid #ABABAB;
+	padding: 10px;
+	width: 65%;
+	text-align: left;
+	border-radius: 50px;
+	margin: 27px;
+}.goggole_Login span {
+	margin-left: 4rem;
+	font-size: 16px;
+}.goggole_Login svg {
+	font-size: 29px;
+}.loginForm a {
+	color: #3F90FC;
+}

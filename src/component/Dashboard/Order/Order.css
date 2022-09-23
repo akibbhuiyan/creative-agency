@@ -1,0 +1,45 @@
+.order {
+	background-color: #E5E5E5;
+	min-height: 70vh;
+	border-radius: 10px;
+	padding: 2rem;
+	margin-right: 2rem;
+}.order-form {
+	display: flex;
+	flex-direction: column;
+	width: 52%;
+}.order-form input,.order-form textarea {
+	margin-bottom: 10px;
+	padding: 15px 17px;
+	border: none;
+	border-radius: 10px;
+	resize: none;
+}
+.order-form input[type=number],.order-form input[type=file]{
+ width: 50%;
+}
+.inputFile {
+	
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+}.inputFile + label {
+	font-size: 1.25em;
+	color: #009444;
+	background: #DEFFED;
+	display: inline-block;
+	border: 1px solid #009444;
+	margin-bottom: 11px;
+	border-radius: 10px;
+	text-align: center;
+	padding: 12px 25px;
+}
+.inputFile + label svg {
+	font-size: 1.9rem;
+	margin-right: 9px;
+}
+.inputFile:focus + label,
+.inputFile + label:hover {
+    background-color: #009444;
+	color: #DEFFED;
+}

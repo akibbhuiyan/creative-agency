@@ -1,0 +1,10 @@
+.footerbg{
+    background-color: #FBD062;
+}.contact-form input,.contact-form textarea {
+	padding: 14px 15px;
+	width: 100%;
+	margin-bottom: 14px;
+	border-radius: 10px;
+	border: none;
+    resize: none;
+}

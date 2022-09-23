@@ -1,0 +1,9 @@
+.addservice-form {
+	display: flex;
+	flex-direction: column;
+}.addservice-form input {
+	margin-bottom: 10px;
+	padding: 15px 17px;
+	border: none;
+	border-radius: 10px;
+}
