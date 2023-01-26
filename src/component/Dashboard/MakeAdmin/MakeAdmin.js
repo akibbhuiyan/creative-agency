@@ -6,9 +6,9 @@ const MakeAdmin = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
   const [admin, setAdmin] = useState("");
+  console.log(admin);
   const handleSubmit = (e) => {
-    e.preventDefault();
-    fetch("https://creative-agency-server-livid.vercel.app/makeAdmin", {
+    fetch("https://creative-agency-server-gbpq.vercel.app/makeAdmin", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ adminemail: admin }),
@@ -17,8 +17,11 @@ const MakeAdmin = () => {
       .then((data) => {
         if (data) {
           alert("Admin Created SuccesFully");
+        } else {
+          console.log("somthing is wrong");
         }
       });
+    e.preventDefault();
   };
   return (
     <div className="row">

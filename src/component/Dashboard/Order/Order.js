@@ -20,7 +20,7 @@ const Order = ({ services }) => {
 
     data.photo = file;
 
-    fetch("https://creative-agency-server-livid.vercel.app/serviceDetails", {
+    fetch("https://creative-agency-server-gbpq.vercel.app/serviceDetails", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ ...data, services }),

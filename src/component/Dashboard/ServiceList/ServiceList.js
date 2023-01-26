@@ -8,7 +8,7 @@ const ServiceList = () => {
   const [serviceList, setServiceList] = useState([]);
   useEffect(() => {
     fetch(
-      `https://creative-agency-server-livid.vercel.app/serviseList?email=${loggedInUser.email}`
+      `https://creative-agency-server-gbpq.vercel.app/serviseList?email=${loggedInUser.email}`
     )
       .then((res) => res.json())
       .then((data) => setServiceList(data));
@@ -16,7 +16,7 @@ const ServiceList = () => {
 
   const [isAdmin, setIsAdmin] = useState(false);
   useEffect(() => {
-    fetch(`https://creative-agency-server-livid.vercel.app/isAdmin`, {
+    fetch(`https://creative-agency-server-gbpq.vercel.app/isAdmin`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email: loggedInUser.email }),
@@ -27,7 +27,7 @@ const ServiceList = () => {
   const [status, setStatus] = useState("");
   const handleChange = (e, service) => {
     const currentstatus = e.target.value;
-    fetch("https://creative-agency-server-livid.vercel.app/serviceStatus", {
+    fetch("https://creative-agency-server-gbpq.vercel.app/serviceStatus", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ serviceId: service._id, status: currentstatus }),

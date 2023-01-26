@@ -8,9 +8,7 @@ const Dashboard = () => {
 
   const [services, setServices] = useState({});
   useEffect(() => {
-    fetch(
-      `https://creative-agency-server-livid.vercel.app/choosenService/${id}`
-    )
+    fetch(`https://creative-agency-server-gbpq.vercel.app/choosenService/${id}`)
       .then((res) => res.json())
       .then((service) => setServices(service[0]));
   }, [id]);

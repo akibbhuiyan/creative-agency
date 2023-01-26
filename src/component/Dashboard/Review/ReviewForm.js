@@ -12,7 +12,7 @@ const ReviewForm = () => {
   } = useForm();
   const onSubmit = (data) => {
     data.photourl = loggedInUser.photourl;
-    fetch("https://creative-agency-server-livid.vercel.app/review", {
+    fetch("https://creative-agency-server-gbpq.vercel.app/review", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ data }),

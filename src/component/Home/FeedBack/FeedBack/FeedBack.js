@@ -4,7 +4,7 @@ import Comment from "../Comment/Comment";
 const FeedBack = () => {
   const [FeedBack, setFeedBack] = useState([]);
   useEffect(() => {
-    fetch("https://creative-agency-server-livid.vercel.app/review")
+    fetch("https://creative-agency-server-gbpq.vercel.app/review")
       .then((res) => res.json())
       .then((data) => setFeedBack(data));
   }, []);

@@ -8,7 +8,7 @@ const Service = ({ service }) => {
 
   const [isAdmin, setIsAdmin] = useState(false);
   useEffect(() => {
-    fetch(`https://creative-agency-server-livid.vercel.app/isAdmin`, {
+    fetch(`https://creative-agency-server-gbpq.vercel.app/isAdmin`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email: loggedInUser.email }),

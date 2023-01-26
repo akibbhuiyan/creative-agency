@@ -23,7 +23,7 @@ const AddService = () => {
     formData.append("title", data.title);
     formData.append("description", data.description);
 
-    fetch("https://creative-agency-server-livid.vercel.app/addService", {
+    fetch("https://creative-agency-server-gbpq.vercel.app/addService", {
       method: "POST",
       body: formData,
     })
