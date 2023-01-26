@@ -25,6 +25,7 @@ const AddService = () => {
 
     fetch("https://creative-agency-server-gbpq.vercel.app/addService", {
       method: "POST",
+      headers: { "content-type": "application/json" },
       body: formData,
     })
       .then((response) => response.json())
