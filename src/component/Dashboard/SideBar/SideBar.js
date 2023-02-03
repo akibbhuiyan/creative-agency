@@ -5,16 +5,16 @@ import { FiShoppingCart, FiHardDrive, FiPlus } from "react-icons/fi";
 import { BiMessageSquareDots } from "react-icons/bi";
 import { MdOutlinePersonAddAlt } from "react-icons/md";
 import "./SideBar.css";
-import { UserContext } from "../../../App";
+import { AuthContext } from "../../Context/UserContext";
 const SideBar = () => {
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const { user } = useContext(AuthContext);
 
   const [isAdmin, setIsAdmin] = useState(false);
   useEffect(() => {
     fetch(`https://creative-agency-server-gbpq.vercel.app/isAdmin`, {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ email: loggedInUser.email }),
+      body: JSON.stringify({ email: user.email }),
     })
       .then((res) => res.json())
       .then((data) => setIsAdmin(data));

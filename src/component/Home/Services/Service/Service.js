@@ -1,21 +1,21 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./Service.css";
 import { useNavigate } from "react-router-dom";
-import { UserContext } from "../../../../App";
+import { AuthContext } from "../../../Context/UserContext";
 
 const Service = ({ service }) => {
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const { user } = useContext(AuthContext);
 
   const [isAdmin, setIsAdmin] = useState(false);
   useEffect(() => {
     fetch(`https://creative-agency-server-gbpq.vercel.app/isAdmin`, {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ email: loggedInUser.email }),
+      body: JSON.stringify({ email: user?.email }),
     })
       .then((res) => res.json())
       .then((data) => setIsAdmin(data));
-  }, [loggedInUser]);
+  }, [user]);
   const navigate = useNavigate();
   const handleService = () => {
     if (!isAdmin) {

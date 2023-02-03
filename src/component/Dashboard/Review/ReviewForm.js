@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { UserContext } from "../../../App";
+import { AuthContext } from "../../Context/UserContext";
 const ReviewForm = () => {
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const { user } = useContext(AuthContext);
 
   const {
     register,
@@ -11,7 +11,7 @@ const ReviewForm = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    data.photourl = loggedInUser.photourl;
+    data.photourl = user?.photourl;
     fetch("https://creative-agency-server-gbpq.vercel.app/review", {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -28,7 +28,7 @@ const ReviewForm = () => {
     <>
       <div className="d-flex justify-content-between p-4">
         <h3>Order</h3>
-        <p>{loggedInUser.name}</p>
+        <p>{user?.displayName}</p>
       </div>
       <div className="order">
         <form onSubmit={handleSubmit(onSubmit)} className="order-form">

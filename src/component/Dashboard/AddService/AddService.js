@@ -3,9 +3,9 @@ import SideBar from "../SideBar/SideBar";
 import { useForm } from "react-hook-form";
 import { BiCloudUpload } from "react-icons/bi";
 import "./AddService.css";
-import { UserContext } from "../../../App";
+import { AuthContext } from "../../Context/UserContext";
 const AddService = () => {
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const { user } = useContext(AuthContext);
   const {
     register,
     handleSubmit,
@@ -46,7 +46,7 @@ const AddService = () => {
         <div>
           <div className="d-flex justify-content-between p-4">
             <h3>Order</h3>
-            <p>{loggedInUser.name}</p>
+            <p>{user?.displayName}</p>
           </div>
           <form onSubmit={handleSubmit(onSubmit)} className="addservice-form">
             <div className="order">

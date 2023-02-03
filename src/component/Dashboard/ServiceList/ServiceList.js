@@ -1,29 +1,29 @@
 import React, { useContext, useEffect, useState } from "react";
-import { UserContext } from "../../../App";
 import SideBar from "../SideBar/SideBar";
 import { useForm } from "react-hook-form";
 import "./ServiceCard.css";
+import { AuthContext } from "../../Context/UserContext";
 const ServiceList = () => {
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const { user } = useContext(AuthContext);
   const [serviceList, setServiceList] = useState([]);
   useEffect(() => {
     fetch(
-      `https://creative-agency-server-gbpq.vercel.app/serviseList?email=${loggedInUser.email}`
+      `https://creative-agency-server-gbpq.vercel.app/serviseList?email=${user.email}`
     )
       .then((res) => res.json())
       .then((data) => setServiceList(data));
-  }, [loggedInUser]);
+  }, [user]);
 
   const [isAdmin, setIsAdmin] = useState(false);
   useEffect(() => {
     fetch(`https://creative-agency-server-gbpq.vercel.app/isAdmin`, {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ email: loggedInUser.email }),
+      body: JSON.stringify({ email: user?.email }),
     })
       .then((res) => res.json())
       .then((data) => setIsAdmin(data));
-  }, [loggedInUser]);
+  }, [user]);
   const [status, setStatus] = useState("");
   const handleChange = (e, service) => {
     const currentstatus = e.target.value;
@@ -46,7 +46,7 @@ const ServiceList = () => {
       <div className="col-md-9">
         <div className="d-flex justify-content-between p-4">
           <h3>Order</h3>
-          <p>{loggedInUser.name}</p>
+          <p>{user?.displayName}</p>
         </div>
         <div className="order">
           {!isAdmin && (

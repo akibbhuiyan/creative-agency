@@ -1,22 +1,135 @@
 .loginForm {
-	height: 400px;
-	width: 570px;
-	justify-content: center;
-	align-items: center;
-	border: 1px solid #ABABAB;
-	border-radius: 5px;
-}.goggole_Login {
-	border: 1px solid #ABABAB;
-	padding: 10px;
-	width: 65%;
-	text-align: left;
-	border-radius: 50px;
-	margin: 27px;
-}.goggole_Login span {
-	margin-left: 4rem;
-	font-size: 16px;
-}.goggole_Login svg {
-	font-size: 29px;
-}.loginForm a {
-	color: #3F90FC;
+  width: 700px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ababab;
+  border-radius: 5px;
+}
+.goggole_Login {
+  border: 1px solid #ababab;
+  padding: 10px;
+  width: 65%;
+  text-align: left;
+  border-radius: 50px;
+  margin: 27px;
+}
+.goggole_Login span {
+  margin-left: 7rem;
+  font-size: 16px;
+}
+.goggole_Login svg {
+  font-size: 29px;
+}
+.loginForm a {
+  color: #3f90fc;
+}
+
+.breadcrumb-inner .page-title .title {
+  margin-bottom: 5px;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+.edu-breadcrumb-nav .edu-breadcumb {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+}
+.edu-breadcrumb-nav .edu-breadcumb li {
+  color: #6f6b80;
+  font-size: 16px;
+  font-weight: 500;
+}
+.edu-breadcrumb-nav .edu-breadcumb .breadcrumb-item a {
+  color: #231f40 !important;
+}
+.shap-image {
+  position: absolute;
+  z-index: -1;
+}
+
+.edu-breadcrumb-area .shape-wrapper .shape-image-1 {
+  left: 4px;
+  top: 26px;
+}
+.edu-breadcrumb-area .shape-wrapper .shape-image-2 {
+  left: 60%;
+  top: 31px;
+}
+.edu-breadcrumb-area .shape-wrapper .shape-image-3 {
+  right: -3px;
+  top: 57px;
+}
+.edu-breadcrumb-area .shape-wrapper .shape-image-4 {
+  right: 0;
+  bottom: 0;
+}
+.edu-breadcrumb-area .shape-wrapper .shape-image-5 {
+  left: 35%;
+  top: 85px;
+}
+.edu-breadcrumb-area .shape-wrapper .shape-image-6 {
+  left: 0;
+  bottom: 0;
+}
+
+.login-form-box h3 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+.login-form input {
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  height: 60px;
+  margin-bottom: 30px;
+  padding: 0 25px;
+  font-weight: 500;
+  color: #6f6b80;
+}
+.comment-form-checkbox {
+  display: flex;
+  justify-content: start;
+}
+.login-form input[type="checkbox"] {
+  margin-right: 10px;
+  height: 26px;
+  width: 16px;
+}
+.login-form input[type="submit"] {
+  background-color: #525fe1;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 60px;
+}
+.login-form label {
+  font-size: 18px;
+  color: #757185;
+  font-weight: 600;
+}
+.login-form p {
+  font-weight: 600;
+  font-size: 17px;
+}
+.login-form p a {
+  font-weight: 800;
+  font-size: 17px;
+  color: #f86f03 !important;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.drNucU > span {
+  opacity: 0.5;
+
+  padding-left: 7px;
+}
+.checklist-icon {
+  width: 12px;
+  padding-top: 6px;
 }

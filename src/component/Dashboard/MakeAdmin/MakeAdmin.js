@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
-import { UserContext } from "../../../App";
+import { AuthContext } from "../../Context/UserContext";
 import SideBar from "./../SideBar/SideBar";
 
 const MakeAdmin = () => {
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const { user } = useContext(AuthContext);
 
   const [admin, setAdmin] = useState("");
   console.log(admin);
@@ -29,7 +29,7 @@ const MakeAdmin = () => {
       <div className="col-md-9">
         <div className="d-flex justify-content-between p-4">
           <h3>Order</h3>
-          <p>{loggedInUser.name}</p>
+          <p>{user?.displayName}</p>
         </div>
         <div className="order">
           <form className="addminInput" onSubmit={handleSubmit}>

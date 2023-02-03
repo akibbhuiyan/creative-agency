@@ -2,11 +2,11 @@ import React, { useContext, useState } from "react";
 import "./Order.css";
 import { useForm } from "react-hook-form";
 import { BiCloudUpload } from "react-icons/bi";
-import { UserContext } from "../../../App";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Context/UserContext";
 
 const Order = ({ services }) => {
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const { user } = useContext(AuthContext);
 
   const {
     register,
@@ -40,7 +40,7 @@ const Order = ({ services }) => {
     <div>
       <div className="d-flex justify-content-between p-4">
         <h3>Order</h3>
-        <p>{loggedInUser.name}</p>
+        <p>{user?.displayName}</p>
       </div>
       <div className="order">
         <form onSubmit={handleSubmit(onSubmit)} className="order-form">
