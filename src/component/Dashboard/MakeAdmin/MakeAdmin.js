@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../Context/UserContext";
 import SideBar from "./../SideBar/SideBar";
+import { toast } from "react-toastify";
 
 const MakeAdmin = () => {
   const { user } = useContext(AuthContext);
@@ -16,7 +17,7 @@ const MakeAdmin = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data) {
-          alert("Admin Created SuccesFully");
+          toast("Admin Created SuccesFully");
         } else {
           console.log("somthing is wrong");
         }

@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 import { AuthContext } from "../../Context/UserContext";
 const ReviewForm = () => {
   const { user } = useContext(AuthContext);
@@ -20,7 +21,7 @@ const ReviewForm = () => {
       .then((res) => res.json())
       .then((result) => {
         if (result) {
-          alert("Review Send Succesfullty");
+          toast("Review Send Succesfullty");
         }
       });
   };

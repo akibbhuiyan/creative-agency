@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import { BiCloudUpload } from "react-icons/bi";
 import "./AddService.css";
 import { AuthContext } from "../../Context/UserContext";
+import { toast } from "react-toastify";
+
 const AddService = () => {
   const { user } = useContext(AuthContext);
   const {
@@ -31,7 +33,7 @@ const AddService = () => {
       .then((response) => response.json())
       .then((data) => {
         if (data) {
-          alert("Service Added SuccessFully");
+          toast("Service Added SuccessFully");
         }
       })
       .catch((error) => {

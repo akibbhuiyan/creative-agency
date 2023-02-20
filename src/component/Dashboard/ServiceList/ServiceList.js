@@ -3,6 +3,7 @@ import SideBar from "../SideBar/SideBar";
 import { useForm } from "react-hook-form";
 import "./ServiceCard.css";
 import { AuthContext } from "../../Context/UserContext";
+import { toast } from "react-toastify";
 const ServiceList = () => {
   const { user } = useContext(AuthContext);
   const [serviceList, setServiceList] = useState([]);
@@ -35,7 +36,7 @@ const ServiceList = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data) {
-          alert("Status Changed");
+          toast("Status Changed");
         }
       });
   };

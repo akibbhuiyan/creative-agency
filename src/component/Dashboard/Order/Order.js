@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { BiCloudUpload } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/UserContext";
+import { toast } from "react-toastify";
 
 const Order = ({ services }) => {
   const { user } = useContext(AuthContext);
@@ -28,7 +29,7 @@ const Order = ({ services }) => {
       .then((res) => res.json())
       .then((data) => {
         if (data) {
-          alert("Service Added SuccessFully");
+          toast("Service Added SuccessFully");
           navigate("/home", { replace: true });
         }
       })
