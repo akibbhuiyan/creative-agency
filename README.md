@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Creative Agenct
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- adminEmail: admin@admin.com
+- adminPassword: 123456
 
-## Available Scripts
+### Project live site [Creative Agency](https://creative-agency-client.vercel.app).
 
-In the project directory, you can run:
+## Project Functionality :
 
-### `npm start`
+ - #### Authentication: The website provides a secure login system using Firebase authentication. Users can log in using their email and password or with their Google account.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ - #### User Dashboard: After logging in, users are directed to their dashboard. Here, they can view their enrolled courses, payment history, and other account details.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ - #### Course Listing: The website features a course listing page that displays all available courses. Each course has a title, description, and price. Users can click on a course to view its details.
 
-### `npm test`
+ - #### Course Details: The course details page provides more information about a course, such as its syllabus, prerequisites, and duration. Users can also see reviews from other students who have taken the course.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ - #### Enroll in a Course: Users can enroll in a course by clicking on the "Enroll Now" button on the course details page. The website then prompts the user to make a payment using a payment gateway.
 
-### `npm run build`
+ - #### Admin Dashboard: The website has an admin dashboard that allows the administrator to manage courses, enrollments, and payments. The admin can add new courses, update course details, view enrollment and payment details, and manage user accounts.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ - #### User Reviews: Users can leave reviews for courses they have taken. These reviews are displayed on the course details page and help other users make informed decisions.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Project Feature:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- This project use <code>react.js</code> as a front-end library.
+- And to add style and to make responsive used <code>Bootstrap</code>
+- Create a admin route feature for only admin can access.
+- Create a Student route feature only seller can access.
+- <code>react-query</code> - used for fetching data from server and loading state and refetch
+- <code>axios</code> - Explore the use of axios and used to get server data.
+- <code>date-fns</code> - used to format the date.
+- <code>firebase</code> - as authentication service. And to host this website.
+- <code>react-router-dom</code> - Using react-router-dom make all the route for this project.
+- <code>react-hook-form</code> - Using get form values, show error message and some basic validation.
+- <code>react-hot-toast</code> - To show beautiful message for user.
+- <code>react-icons</code> - Used for site icon.
